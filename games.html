@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="stylend.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <a class="logo-header" href="index.html">
+            
+            <span class="site-name">NaughtyDog</span>
+            <span class="site-desc">Dylan Vargas / Carlos Gomez</span>
+        </a> <!--/#logo-hreader-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="apply.html">Apply for Us</a></li>
+            </ul>
+        </nav><!--#main-header-->
+    </header>
+        <section id="maint-content">
+            <article>
+                <header>
+                    <h1>Our Work!</h1>
+                </header>
+                
+                <div class="content">
+                    <p>Established in 1984, Naughty Dog is one of the most successful and prolific game development studios in the world and a flagship first-party studio within PlayStation Studios. From creating the iconic Crash Bandicoot and Jak and Daxter series to modern franchises like Uncharted and The Last of Us, Naughty Dog is responsible for some of the most critically acclaimed and commercially successful games on Sony’s PlayStation platforms. Through its use of cutting-edge technology and evocative, character-driven storytelling, Naughty Dog has received hundreds of industry and media awards, while developing a passionate fan base of millions of players around the globe.
+
+                        Naughty Dog’s recent releases include 2016’s Uncharted 4: A Thief’s End, winner of numerous Game of the Year awards, and 2017’s Uncharted: The Lost Legacy—a new standalone adventure in the Uncharted series. By December 2017, total global sales for the Uncharted franchise surpassed 41.7 million copies sold.
+                        
+                        Naughty Dog's latest title is The Last of Us Part II, the much-anticipated sequel to 2013’s The Last of Us, which is available now for PlayStation 4.
+                    </p>
+                </div>
+            </article>
+                <div class="games">
+                    <ul>
+                    <li><button type="button" id="btnUncharted">
+                        <img src="src/unchartedlogo.png" alt="unchartedlogo">
+                    </button></li>
+                    <li><button type="button" id="btnLoU">
+                        <img src="src/tlousagalogo.png" alt="tloulogo">
+                    </button></li>
+                    <li><button type="button" id="btnJyD">
+                        <img src="src/jakydaxterlogo.png" alt="jakanddaxter">
+                    </button></li>
+                    <li><button type="button" id="btnCrash">
+                        <img src="src/crashlogo.png" alt="crashbandicootlogo">
+                    </button></li>
+                    </ul>
+                </div>
+                <article>
+                <div class="container" id="contenido"></div>
+                <script type="text/javascript">
+                    $('#btnUncharted').click(function(){
+                        var esperar=500;
+                        $.ajax({
+                            url:"games/uncharted.html",
+                            beforeSend: function(){
+                                $('#contenido').text('Loading....');
+                            },
+                            success: function(data){
+                                setTimeout(function(){
+                                    $('#contenido').html(data);
+                                }, esperar
+                            );
+                            }
+                        })
+                    })
+
+                    $('#btnLoU').click(function(){
+                        var esperar=500;
+                        $.ajax({
+                            url:"games/lou.html",
+                            beforeSend: function(){
+                                $('#contenido').text('Loading....');
+                            },
+                            success: function(data){
+                                setTimeout(function(){
+                                    $('#contenido').html(data);
+                                }, esperar
+                            );
+                            }
+                        })
+                    })
+
+                    $('#btnCrash').click(function(){
+                        var esperar=500;
+                        $.ajax({
+                            url:"games/crash.html",
+                            beforeSend: function(){
+                                $('#contenido').text('Loading....');
+                            },
+                            success: function(data){
+                                setTimeout(function(){
+                                    $('#contenido').html(data);
+                                }, esperar
+                            );
+                            }
+                        })
+                    })
+
+                    $('#btnJyD').click(function(){
+                        var esperar=500;
+                        $.ajax({
+                            url:"games/jyd.html",
+                            beforeSend: function(){
+                                $('#contenido').text('Loading....');
+                            },
+                            success: function(data){
+                                setTimeout(function(){
+                                    $('#contenido').html(data);
+                                }, esperar
+                            );
+                            }
+                        })
+                    })
+                </script>
+            </article>
+        </section>
+        <footer class="main-footer">
+            <p>&copy; 2024 Sony Interactive Entertainment LLC.<a href=""></a></p>
+        </footer>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="stylend.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaughtyDog</title>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <a class="logo-header" href="index.html">
+        <span class="site-name">NaughtyDog</span>
+        <span class="site-desc">Dylan Vargas / Carlos Gomez</span>
+      </a>
+      <!--/#logo-hreader-->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="apply.html">Apply for Us</a></li>
+        </ul>
+      </nav>
+      <!--#main-header-->
+    </header>
+    <section id="main-content">
+      <form id="postulacion-form">
+        <label for="nombre">Full Name:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required /><br />
+
+        <label for="profesion">Profesion:</label>
+        <input type="text" class="form-control" id="profesion" name="profesion" required /><br />
+
+        <label for="telefono">Cellphone:</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" required /><br />
+
+        <label for="correo">e-mail:</label>
+        <input type="text" class="form-control" id="correo" name="correo" required /><br />
+
+        <label for="linkedin">LinkedIn:</label>
+        <input type="text" class="form-control" id="linkedin" name="linkedin" required /><br />
+      </form>
+
+      <p>Seleccione sus habilidades (Max 3):</p>
+      <form id="habilidades-form">
+        <label>
+          <input type="checkbox" name="habilidad" value="HTML" /> HTML
+        </label>
+        <label>
+          <input type="checkbox" name="habilidad" value="CSS" /> CSS
+        </label>
+        <label>
+          <input type="checkbox" name="habilidad" value="git" /> git
+        </label>
+        <label>
+          <input type="checkbox" name="habilidad" value="JavaScript" />
+          JavaScript
+        </label>
+        <label>
+          <input type="checkbox" name="habilidad" value="AJAX" /> AJAX
+        </label>
+        <label>
+          <input type="checkbox" name="habilidad" value="React" /> React
+        </label>
+      </form>
+      <button class="btn-primary"> Submit </button>
+    </section>
+    <script>
+      const inputNumber = document.querySelector(
+        'input[name="habilidades_seleccionadas"]'
+      );
+      const checkboxes = document.querySelectorAll('input[name="habilidad"]');
+
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", () => {
+          const checkedCount = document.querySelectorAll(
+            'input[name="habilidad"]:checked'
+          ).length;
+
+          if (checkedCount > 3) {
+            checkbox.checked = false; // Desmarcar el checkbox si se excede el límite
+            return; // Evitar que el contador se actualice
+          }
+
+          inputNumber.value = checkedCount; // Actualizar el contador
+        });
+      });
+    </script>
+    <footer class="main-footer">
+      <p>&copy; 2024 Sony Interactive Entertainment LLC.<a href=""></a></p>
+    </footer>
+  </body>
+</html>
