@@ -175,7 +175,7 @@ nav{
     margin: 0;
 }
 
-#main-content{
+#maint-content{
     display:block;
     justify-items: center;
     justify-content: center;
@@ -297,4 +297,21 @@ input:focus{
     background-color: #e02fff;
     text-align: center;
     padding-top: 40px;
+}
+.content-area{
+    display: flex;
+}
+.content-area .imageareacontainer{
+    
+}
+.imageareacontainer{
+    flex: 1;
+    padding: 20px;
+}
+.imageareacontainer img{
+    border-right: 5px solid #f02b2b;
+}
+.contentarea{
+    flex: 2;
+    padding: 20px;
 }
