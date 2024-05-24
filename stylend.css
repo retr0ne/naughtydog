@@ -40,7 +40,7 @@ height:90px;
 body{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #666;
     background: white;
     font-size: 1em;
@@ -50,7 +50,7 @@ h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2.5em;
     line-height: 1.5em;
-    margin: 15px 20px;
+    margin: 10px 20px;
     margin-top: 100px;
     text-align: center;
     font-weight: 300;
@@ -181,7 +181,7 @@ nav{
     justify-content: center;
     margin-top: 100px;
     margin-left: 100px;
-    width: 450px;
+    width: 400px;
     height: 730px;
     background-color: #fff;
     border-radius: 20px;
