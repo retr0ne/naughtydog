@@ -300,6 +300,7 @@ input:focus{
 }
 .content-area{
     display: flex;
+    width:100%
 }
 .content-area .imageareacontainer{
     
@@ -310,8 +311,26 @@ input:focus{
 }
 .imageareacontainer img{
     border-right: 5px solid #f02b2b;
+    margin-left: -25px;
 }
-.contentarea{
-    flex: 2;
+
+.info-area{
+    padding-right: 50px;
+    padding-left: 0px;
+}
+
+.liner{
+    display:inline-flex;
+}
+
+.info-area {
+    width: 60%;
+}
+
+#area{
+    margin-top: -25px;
+    background: #333;
+    color: white;
+    text-align: center;
     padding: 20px;
 }
