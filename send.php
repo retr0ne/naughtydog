@@ -20,7 +20,7 @@ $habilidades = isset($_POST['habilidad']) ? $_POST['habilidad'] : array();
 
 $habilidades_str = implode(", ", $habilidades);
 
-$sql = "INSERT INTO postulaciones (nombre, profesion, telefono, correo, linkedin, habilidades) 
+$sql = "INSERT INTO forms (full_name, profession, telephone, email, linkedin, skills) 
         VALUES ('$nombre', '$profesion', '$telefono', '$correo', '$linkedin', '$habilidades_str')";
 
 if ($conn->query($sql) === TRUE) {
