@@ -1,9 +1,8 @@
 <?php
-// 1. Conexión a la base de datos (misma lógica que antes)
-$servername = "tu_servidor";
-$username = "tu_usuario";
-$password = "tu_contraseña";
-$dbname = "tu_base_de_datos";
+$servername = "localhost:3307";
+$username = "root";
+$password = "1234";
+$dbname = "forms";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -25,9 +24,9 @@ $sql = "INSERT INTO postulaciones (nombre, profesion, telefono, correo, linkedin
         VALUES ('$nombre', '$profesion', '$telefono', '$correo', '$linkedin', '$habilidades_str')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Postulación enviada correctamente";
+    echo "Postulation sent";
 } else {
-    echo "Error al enviar postulación: " . $conn->error;
+    echo "Error" . $conn->error;
 }
 
 $conn->close();
