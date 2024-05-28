@@ -137,6 +137,7 @@ nav{
                   div.games ul li { 
                     list-style-type: none; 
                   }
+                  
 .main-footer{
     background: #333;
     color: white;
@@ -329,8 +330,8 @@ input:focus{
 
 #area{
     margin-top: -25px;
-    background: #333;
+    background: #f02b2b;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px;
 }
