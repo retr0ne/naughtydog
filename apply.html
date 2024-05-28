@@ -65,34 +65,16 @@
         <label>
           <input type="checkbox" name="habilidad" value="React" /> REACT
         </label>
+       
       </form>
       <button class="btn-primary"> Submit </button>
     </section>
-    <script>
-      const inputNumber = document.querySelector(
-        'input[name="habilidades_seleccionadas"]'
-      );
-      const checkboxes = document.querySelectorAll('input[name="habilidad"]');
-
-      checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", () => {
-          const checkedCount = document.querySelectorAll(
-            'input[name="habilidad"]:checked'
-          ).length;
-
-          if (checkedCount > 3) {
-            checkbox.checked = false; // Desmarcar el checkbox si se excede el límite
-            return; // Evitar que el contador se actualice
-          }
-
-          inputNumber.value = checkedCount; // Actualizar el contador
-        });
-      });
-    </script>
+    
     <footer class="main-footer">
       <p>NAUGHTY DOG, LLC.</p>
             <p>Privacy Policy | Terms of Use</p>
             <p>&copy; 2024 Sony Interactive Entertainment LLC.<a href=""></a></p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
