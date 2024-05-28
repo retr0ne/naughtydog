@@ -301,10 +301,7 @@ input:focus{
 }
 .content-area{
     display: flex;
-    width:100%
-}
-.content-area .imageareacontainer{
-    
+    width:100%;
 }
 .imageareacontainer{
     flex: 1;
@@ -313,6 +310,7 @@ input:focus{
 .imageareacontainer img{
     border-right: 5px solid #f02b2b;
     margin-left: -25px;
+    height: 100%;
 }
 
 .info-area{
@@ -335,3 +333,4 @@ input:focus{
     text-align: center;
     padding: 20px;
 }
+
