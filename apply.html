@@ -31,18 +31,27 @@
       <form id="postulacion-form">
         <label for="nombre">Name:</label>
         <input type="text" class="form-control" id="nombre" placeholder="Write your full name here." name="nombre" required /><br />
+        <p class="warning" id="warningNombre"></p>
+
 
         <label for="profesion">Profesion:</label>
         <input type="text" class="form-control" id="profesion" placeholder="Write your profesion here." name="profesion" required /><br />
+        <p class="warning" id="warningProfesion"></p>
+
 
         <label for="telefono">Cellphone:</label>
         <input type="text" class="form-control" id="telefono" placeholder="Write your cellphone number here." name="telefono" required /><br />
+        <p class="warning" id="warningTelefono"></p>
+
 
         <label for="correo">Email:</label>
         <input type="text" class="form-control" id="correo" placeholder="Write your email here." name="correo" required /><br />
-
+        <p class="warning" id="warningEmail"></p>
+        
         <label for="linkedin">LinkedIn:</label>
         <input type="text" class="form-control" id="linkedin" placeholder="Write your linkedin profile url here." name="linkedin" required /><br />
+        <p class="warning" id="warningLinkedin"></p>
+
       </form>
 
       <p>Choose your skills: (Max 3):</p>
@@ -54,27 +63,27 @@
           <input type="checkbox" name="habilidad" value="CSS" /> CSS
         </label>
         <label>
-          <input type="checkbox" name="habilidad" value="git" /> GIT
+          <input type="checkbox" name="habilidad" value="gIT" /> GIT
         </label>
         <label>
-          <input type="checkbox" name="habilidad" value="JavaScript" /> JAVASCRIPT
+          <input type="checkbox" name="habilidad" value="JAVASCRIPT" /> JAVASCRIPT
         </label>
         <label>
           <input type="checkbox" name="habilidad" value="AJAX" /> AJAX
         </label>
         <label>
-          <input type="checkbox" name="habilidad" value="React" /> REACT
+          <input type="checkbox" name="habilidad" value="REACT" /> REACT
         </label>
        
       </form>
-      <button class="btn-primary"> Submit </button>
+      <button id="btn-primary"> Submit </button>
     </section>
-    
+    <script src="script.js"></script>
     <footer class="main-footer">
       <p>NAUGHTY DOG, LLC.</p>
             <p>Privacy Policy | Terms of Use</p>
             <p>&copy; 2024 Sony Interactive Entertainment LLC.<a href=""></a></p>
     </footer>
-    <script src="script.js"></script>
+    
   </body>
 </html>

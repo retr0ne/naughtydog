@@ -187,7 +187,7 @@ nav{
     margin-top: 100px;
     margin-left: 100px;
     width: 400px;
-    height: 730px;
+    height: auto;
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
@@ -208,7 +208,7 @@ nav{
     margin-bottom: 5px;
     padding-top: 10px;
 }
-.btn-primary {
+#btn-primary {
     background: #333; /* Color de fondo */
     border: none; /* Sin borde */
     color: white; /* Color del texto */
@@ -224,7 +224,7 @@ nav{
     transition: background-color 0.3s, transform 0.3s; /* Transición suave */
     margin-bottom: 10px;
 }
-.btn-primary:hover{
+#btn-primary:hover{
     background-color: #f02b2b; /* Color de fondo al pasar el mouse */
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
@@ -262,16 +262,17 @@ input:focus{
     justify-items: center;
     margin-top: 50px;
     width: 450px;
-    height: 600px;
+    height: auto;
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0px 0px 25px #ef93ff;
+    box-shadow: 0px 0px 25px #f02b2b;
+    position: relative;
 }
 
 .card img{
-    margin-top: 40px;
-    box-shadow: 0px 0px 10px goldenrod;
+
+    margin-left: 21%;
     width: 60%;
     border-radius: 50%;
     object-fit: scale-down;
@@ -292,14 +293,14 @@ input:focus{
     font-weight: 600;
     margin-top: 10px;
     font-size: 30px;
-    color: #e02fff;
+    color: #f02b2b;
 }
 
 .card #boton{
     color: #ffffff;
     font-size: 30px;
     width: 100%;
-    background-color: #e02fff;
+    background-color: #f02b2b;
     text-align: center;
     padding-top: 40px;
 }
@@ -336,5 +337,11 @@ input:focus{
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+.warning{
+    color: #f02b2b;
+    margin: auto;
+    padding-top: 20px;
 }
 
