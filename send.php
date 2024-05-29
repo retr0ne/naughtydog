@@ -12,16 +12,16 @@ if ($conn->connect_error) {
 
 $nombre = $_POST['nombre'];
 $profesion = $_POST['profesion'];
-$telefono = $_POST['telefono'];
-$correo = $_POST['correo'];
+$telefono = $_POST['telephone'];
+$correo = $_POST['email'];
 $linkedin = $_POST['linkedin'];
 
-$habilidades = isset($_POST['habilidad']) ? $_POST['habilidad'] : array();
+//$habilidades = isset($_POST['habilidad']) ? $_POST['habilidad'] : array();
 
-$habilidades_str = implode(", ", $habilidades);
+//$habilidades_str = implode(", ", $habilidades);
 
-$sql = "INSERT INTO forms (full_name, profession, telephone, email, linkedin, skills) 
-        VALUES ('$nombre', '$profesion', '$telefono', '$correo', '$linkedin', '$habilidades_str')";
+$sql = "INSERT INTO forms (full_name, profesion, telephone, email, linkedin, skills) 
+        VALUES ('$nombre', '$profesion', '$telefono', '$correo', '$linkedin', '')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Postulation sent";

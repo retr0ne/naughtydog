@@ -18,32 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     
-    //cargar games con AJAX
-
-    const buttons = [
-        { id: '#btnUncharted', url: 'games/uncharted.html' },
-        { id: '#btnLoU', url: 'games/lou.html' },
-        { id: '#btnCrash', url: 'games/crash.html' },
-        { id: '#btnJyD', url: 'games/jyd.html' }
-    ];
-    
-    const esperar = 500;
-
-    buttons.forEach(button => {
-        document.querySelector(button.id).addEventListener('click', () => {
-            fetch(button.url)
-                .then(response => {
-                    document.getElementById('contenido').textContent = 'Loading....';
-                    return response.text();
-                })
-                .then(data => {
-                    setTimeout(() => {
-                        document.getElementById('contenido').innerHTML = data;
-                    }, esperar);
-                })
-                .catch(error => console.error('Error:', error));
-        });
-    });
 });
 
     //comprobar y enviar datos a la tarjeta
@@ -94,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   
       // Validar Profesión
-      if (profesion.value.length < 6) {
+      if (profesion.value.length < 3) {
         warningProfesion.innerHTML = "La profesión es muy corta";
         boolProfesion = false;
       } else if (num.test(profesion.value)) {
@@ -169,23 +143,23 @@ document.addEventListener("DOMContentLoaded", () => {
         card.appendChild(card_body);
   
         const tarjetaNombre = document.createElement('h2');
-        tarjetaNombre.textContent = nombre.value;
+        tarjetaNombre.textContent = "Name: "+nombre.value;
         card_body.appendChild(tarjetaNombre);
   
         const tarjetaProfesion = document.createElement('p');
-        tarjetaProfesion.textContent = profesion.value;
+        tarjetaProfesion.textContent = "Profesion: "+profesion.value;
         card_body.appendChild(tarjetaProfesion);
   
         const tarjetaTelefono = document.createElement('p');
-        tarjetaTelefono.textContent = telefono.value;
+        tarjetaTelefono.textContent = "Telephone: " + telefono.value;
         card_body.appendChild(tarjetaTelefono);
   
         const tarjetaEmail = document.createElement('p');
-        tarjetaEmail.textContent = email.value;
+        tarjetaEmail.textContent = "e-mail: "+ email.value;
         card_body.appendChild(tarjetaEmail);
   
         const tarjetaLinkedin = document.createElement('p');
-        tarjetaLinkedin.textContent = linkedin.value;
+        tarjetaLinkedin.textContent = "Linkedin: "+linkedin.value;
         card_body.appendChild(tarjetaLinkedin);
   
         const card_redes = document.createElement('div');
@@ -201,5 +175,30 @@ document.addEventListener("DOMContentLoaded", () => {
         });
   
         tarjeta = true;
+        console.log("gato hpta");
+
+        var params ={
+          "nombre": nombre.value,
+          "profesion": profesion.value,
+          "telephone": telefono.value,
+          "email": email.value,
+          "linkedin": linkedin.value
+        }
+        $.ajax({
+          data: params,
+          url: "send.php",
+          type: "POST",
+
+          beforesend: function(){
+
+          },
+          success: function(mensaje){
+            console.log("Gato hpta 2" + mensaje)
+          },
+          error: function(jqXHR, status, error){
+            console.log("fallo " + error.message);
+          }
+        });
+
       }
     });
