@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const form = document.getElementById("postulacion-form");
     const submitBtn = document.getElementById("btn-primary");
+    const section = document.getElementById("contenedor-mayor");
   
     const nombre = document.getElementById("nombre");
     const profesion = document.getElementById("profesion");
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       // Validar Nombre
       if (nombre.value.length < 4) {
-        warningNombre.innerHTML = 'El Nombre es muy corto';
+        warningNombre.innerHTML = "El Nombre es muy corto";
         boolNombre = false;
       } else if (num.test(nombre.value)) {
         warningNombre.innerHTML = "El Nombre solo puede contener letras";
@@ -152,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         const card = document.createElement('div');
         card.className = 'card';
-        document.body.appendChild(card);
+        section.appendChild(card);
   
         const card_image = document.createElement('div');
         card_image.className = 'card_image';

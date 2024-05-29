@@ -179,6 +179,10 @@ nav{
     display: table;
     margin: 0;
 }
+#contenedor-mayor{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 #maint-content{
     display:block;
@@ -207,6 +211,58 @@ nav{
     margin-top: 5px;
     margin-bottom: 5px;
     padding-top: 10px;
+}
+.card{
+    display: grid;
+    justify-items: center;
+    margin-top: 50px;
+    margin-left: 150px;
+    width: 450px;
+    height: auto;
+    background-color: #fff;
+    color: #333;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 25px #f02b2b;
+    position: relative;
+}
+
+.card img{
+    margin-left: 21%;
+    width: 60%;
+    border-radius: 50%;
+    object-fit: scale-down;
+}
+
+.card p{
+    text-align: center;
+    margin-top: 0px;
+    color: #333;
+    font-family:'Montserrat',sans-serif;
+}
+
+.card p:nth-child(3){
+    color: #333;
+    font-family:'Montserrat',sans-serif;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.card p:nth-child(2){
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 30px;
+    color: #f02b2b;
+    font-family:'Montserrat',sans-serif;
+}
+
+.card #boton{
+    color: #ffffff;
+    font-size: 30px;
+    width: 100%;
+    background-color: #f02b2b;
+    text-align: center;
+    padding-top: 40px;
 }
 #btn-primary {
     background: #333; /* Color de fondo */
@@ -257,53 +313,6 @@ input:focus{
 }
 
 
-.card{
-    display: grid;
-    justify-items: center;
-    margin-top: 50px;
-    width: 450px;
-    height: auto;
-    background-color: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0px 0px 25px #f02b2b;
-    position: relative;
-}
-
-.card img{
-
-    margin-left: 21%;
-    width: 60%;
-    border-radius: 50%;
-    object-fit: scale-down;
-}
-
-.card p{
-    text-align: center;
-    margin-top: 0px;
-}
-
-.card p:nth-child(3){
-    color: grey;
-    margin-top: 10px;
-    font-size: 20px;
-}
-
-.card p:nth-child(2){
-    font-weight: 600;
-    margin-top: 10px;
-    font-size: 30px;
-    color: #f02b2b;
-}
-
-.card #boton{
-    color: #ffffff;
-    font-size: 30px;
-    width: 100%;
-    background-color: #f02b2b;
-    text-align: center;
-    padding-top: 40px;
-}
 .content-area{
     display: flex;
     width:100%;

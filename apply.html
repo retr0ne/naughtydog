@@ -27,57 +27,62 @@
       </nav>
       <!--#main-header-->
     </header>
-    <section id="maint-content">
-      <form id="postulacion-form">
-        <label for="nombre">Name:</label>
-        <input type="text" class="form-control" id="nombre" placeholder="Write your full name here." name="nombre" required /><br />
-        <p class="warning" id="warningNombre"></p>
+    <div id="contenedor-mayor">
+      <section id="maint-content">
+        <form id="postulacion-form">
+          <label for="nombre">Name:</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Write your full name here." name="nombre" required /><br />
+          <p class="warning" id="warningNombre"></p>
+  
+  
+          <label for="profesion">Profesion:</label>
+          <input type="text" class="form-control" id="profesion" placeholder="Write your profesion here." name="profesion" required /><br />
+          <p class="warning" id="warningProfesion"></p>
+  
+  
+          <label for="telefono">Cellphone:</label>
+          <input type="text" class="form-control" id="telefono" placeholder="Write your cellphone number here." name="telefono" required /><br />
+          <p class="warning" id="warningTelefono"></p>
+  
+  
+          <label for="correo">Email:</label>
+          <input type="text" class="form-control" id="correo" placeholder="Write your email here." name="correo" required /><br />
+          <p class="warning" id="warningEmail"></p>
+          
+          <label for="linkedin">LinkedIn:</label>
+          <input type="text" class="form-control" id="linkedin" placeholder="Write your linkedin profile url here." name="linkedin" required /><br />
+          <p class="warning" id="warningLinkedin"></p>
+  
+        </form>
+  
+        <p>Choose your skills: (Max 3):</p>
+        <form id="skills-form">
+          <label>
+            <input type="checkbox" name="habilidad" value="HTML" />  HTML
+          </label>
+          <label>
+            <input type="checkbox" name="habilidad" value="CSS" /> CSS
+          </label>
+          <label>
+            <input type="checkbox" name="habilidad" value="GIT" /> GIT
+          </label>
+          <label>
+            <input type="checkbox" name="habilidad" value="JAVASCRIPT" /> JAVASCRIPT
+          </label>
+          <label>
+            <input type="checkbox" name="habilidad" value="AJAX" /> AJAX
+          </label>
+          <label>
+            <input type="checkbox" name="habilidad" value="REACT" /> REACT
+          </label>
+         
+        </form>
+        <button id="btn-primary"> Submit </button>
+      </section>
 
-
-        <label for="profesion">Profesion:</label>
-        <input type="text" class="form-control" id="profesion" placeholder="Write your profesion here." name="profesion" required /><br />
-        <p class="warning" id="warningProfesion"></p>
-
-
-        <label for="telefono">Cellphone:</label>
-        <input type="text" class="form-control" id="telefono" placeholder="Write your cellphone number here." name="telefono" required /><br />
-        <p class="warning" id="warningTelefono"></p>
-
-
-        <label for="correo">Email:</label>
-        <input type="text" class="form-control" id="correo" placeholder="Write your email here." name="correo" required /><br />
-        <p class="warning" id="warningEmail"></p>
-        
-        <label for="linkedin">LinkedIn:</label>
-        <input type="text" class="form-control" id="linkedin" placeholder="Write your linkedin profile url here." name="linkedin" required /><br />
-        <p class="warning" id="warningLinkedin"></p>
-
-      </form>
-
-      <p>Choose your skills: (Max 3):</p>
-      <form id="skills-form">
-        <label>
-          <input type="checkbox" name="habilidad" value="HTML" />  HTML
-        </label>
-        <label>
-          <input type="checkbox" name="habilidad" value="CSS" /> CSS
-        </label>
-        <label>
-          <input type="checkbox" name="habilidad" value="GIT" /> GIT
-        </label>
-        <label>
-          <input type="checkbox" name="habilidad" value="JAVASCRIPT" /> JAVASCRIPT
-        </label>
-        <label>
-          <input type="checkbox" name="habilidad" value="AJAX" /> AJAX
-        </label>
-        <label>
-          <input type="checkbox" name="habilidad" value="REACT" /> REACT
-        </label>
-       
-      </form>
-      <button id="btn-primary"> Submit </button>
-    </section>
+    </div>
+    
+    
     
     <footer class="main-footer">
       <p>NAUGHTY DOG, LLC.</p>
