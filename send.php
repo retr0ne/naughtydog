@@ -16,12 +16,12 @@ $telefono = $_POST['telephone'];
 $correo = $_POST['email'];
 $linkedin = $_POST['linkedin'];
 
-//$habilidades = isset($_POST['habilidad']) ? $_POST['habilidad'] : array();
+$habilidades = isset($_POST['habilidad']) ? $_POST['habilidad'] : array();
 
-//$habilidades_str = implode(", ", $habilidades);
+$habilidades_str = implode(", ", $habilidades);
 
-$sql = "INSERT INTO forms (full_name, profesion, telephone, email, linkedin, skills) 
-        VALUES ('$nombre', '$profesion', '$telefono', '$correo', '$linkedin', '')";
+$sql = "INSERT INTO forms (full_name, profesion, telephone, email, linkedin, skills1, skills2, skills3) 
+        VALUES ('$nombre', '$profesion', '$telefono', '$correo', '$linkedin', '', '', '')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Postulation sent";

@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const telefono = document.getElementById("telefono");
     const email = document.getElementById("correo");
     const linkedin = document.getElementById("linkedin");
+    const skills = Array.fom(document.querySelectorAll('input[name="habilidad":checked]')).map(elem => elem.value);
     const warningNombre = document.getElementById("warningNombre");
     const warningProfesion = document.getElementById("warningProfesion");
     const warningTelefono = document.getElementById("warningTelefono");
@@ -175,15 +176,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
   
         tarjeta = true;
-        console.log("gato hpta");
 
         var params ={
           "nombre": nombre.value,
           "profesion": profesion.value,
           "telephone": telefono.value,
           "email": email.value,
-          "linkedin": linkedin.value
+          "linkedin": linkedin.value,
         }
+
+        console.log(seleccionados.values);
+
         $.ajax({
           data: params,
           url: "send.php",
@@ -193,10 +196,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
           },
           success: function(mensaje){
-            console.log("Gato hpta 2" + mensaje)
+            console.log("Works " + mensaje)
           },
           error: function(jqXHR, status, error){
-            console.log("fallo " + error.message);
+            console.log("Fail " + error.message);
           }
         });
 
