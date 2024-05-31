@@ -32,6 +32,15 @@ CREATE TABLE `skills` (
   PRIMARY KEY (`idskills`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
+CREATE TABLE `applicantskills` (
+  `applicant_id` int NOT NULL,
+  `skill_id` int NOT NULL,
+  PRIMARY KEY (`form_id`,`skill_id`),
+  KEY `skill_id` (`skill_id`),
+  CONSTRAINT `applicantskills_ibfk_1` FOREIGN KEY (`form_id`) REFERENCES `forms` (`idforms`) ON DELETE CASCADE,
+  CONSTRAINT `applicantskills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`idskills`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
 INSERT INTO `skills` (`descr`) VALUES ("HTML")
 
 INSERT INTO `skills` (`descr`) VALUES ("CSS")
